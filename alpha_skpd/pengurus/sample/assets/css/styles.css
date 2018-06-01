@@ -1,0 +1,46 @@
+
+* {
+	margin:0;
+	padding:0;
+}
+
+html{
+	background-color: #f3f3f3;
+}
+
+body{
+	font: normal 14px sans-serif;
+}
+
+
+
+#page {
+	display: -webkit-flex;
+	display: flex;
+	max-width:1200px;
+	margin:0 auto;
+}
+
+#main {
+	-webkit-flex-grow:1;
+	flex-grow:1;
+
+	background-color:#fff;
+	padding:40px 100px 40px 40px;
+	line-height: 1.5;
+	color:#565a5c;
+	height :-webkit-fill-available;	
+
+}
+
+aside{
+	-webkit-flex-shrink:0;
+	flex-shrink:0;
+	width:280px;
+
+	background-color:#292c2f;
+	color:#fff;
+	padding:20px;
+	height :-webkit-fill-available;
+}
+
