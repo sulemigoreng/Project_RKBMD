@@ -1,5 +1,6 @@
 <?php
 	include("koneksi/koneksi.php");
+	$idskpd=$_GET['id_skpd'];
 ?>
 <div class="main-dash">
 	

@@ -13,6 +13,8 @@
 	$input_kegiatan = 'kegiatan/input';
 	$usulan = 'usulan/index';
 	$input_usulan = 'usulan/input';
+	$optimasi = 'optimasi/index';
+	$input_optimasi= 'optimasi/input';
 ?>
 <!DOCTYPE html>
 <html>
@@ -137,6 +139,7 @@
 				<ul class="menu-sidebar">
 					<li class="header">MENU</li>
 					<li><a href="?data=beranda"><img src="../assets/img/home.svg" class="menu-icon">Beranda</a></li>
+					<li><a href="?data=optimasi"><img src="../assets/img/upload.svg" class="menu-icon">Optimasi Barang</a></li>
 					<li><a href="?data=program"><img src="../assets/img/upload.svg" class="menu-icon">Usulan Rencana Kebutuhan</a></li>
 					<!--<li><a href="?data=rencana">Perencanaan</a></li>-->
 				</ul>
@@ -161,6 +164,8 @@
 						
 						case 'usulan':     include "$usulan.php"; break;
 						case 'input_usulan':     include "$input_usulan.php"; break;
+						case 'optimasi': include "$optimasi.php"; break;
+						case 'input_optimasi': include "$input_optimasi.php"; break;
 						default:			include "notfound.php";		break;
 					}
 				?>
