@@ -40,7 +40,62 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-    
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$('#skpd').change(function(){
+    			var idskpd=$(this).val();
+    			alert(idskpd);
+    			$.ajax({
+    				url:'usulan/getprogram.php',
+    				method:'POST',
+    				data:{idskpd:idskpd},
+    				success:function(data){
+    					$('#program').html(data);
+    				}
+    			});
+    			$.ajax({
+    				url:'usulan/getusulan.php',
+    				method:'POST',
+    				data:{idskpd:idskpd,action:'getusulanskpd'},
+    				success:function(data){
+    					$('#tableusulan').html(data);
+    				}
+    			});
+    		});
+    		$('#program').change(function(){
+    			var idprogram=$(this).val();
+    			alert(idprogram);
+    			$.ajax({
+    				url:'usulan/getkegiatan.php',
+    				method:'POST',
+    				data:{idprogram:idprogram},
+    				success:function(data){
+    					$('#kegiatan').html(data);
+    				}
+    			});
+    			$.ajax({
+    				url:'usulan/getusulan.php',
+    				method:'POST',
+    				data:{idprogram:idprogram,action:'getusulanprogram'},
+    				success:function(data){
+    					$('#tableusulan').html(data);
+    				}
+    			});
+    		});
+    		$('#kegiatan').change(function(){
+    			var idkegiatan=$(this).val();
+    			alert(idkegiatan);
+    			$.ajax({
+    				url:'usulan/getusulan.php',
+    				method:'POST',
+    				data:{idkegiatan:idkegiatan,action:'getusulankegiatan'},
+    				success:function(data){
+    					$('#tableusulan').html(data);
+    				}
+    			});
+    		});
+    	});
+    </script>
 
 	
   </head>

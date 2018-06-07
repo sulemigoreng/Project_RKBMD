@@ -15,18 +15,33 @@
 				<tr>
 					<td>Pilih SKPD : </td>
 					<td>
-						<select>
+						<select id="skpd">
+							<option selected>- SELECT -</option>
 							<?php
 								$query=mysqli_query($koneksi,"SELECT DISTINCT s.id_skpd,s.nama_skpd FROM skpd s,program_skpd p,kegiatan_program k,usulan_barang u
 									WHERE(s.id_skpd=p.id_skpd AND k.id_program=p.id_program AND u.id_kegiatan=k.id_kegiatan)")or die(mysqli_error($koneksi));
 								while ($data=mysqli_fetch_array($query)) {
 									if($idskpd==$data['id_skpd']){
-										echo "<option selected value=".$data['s.id_skpd'].">".$data['nama_skpd']."</option>";
+										echo "<option selected value='".$data['id_skpd']."'>".$data['nama_skpd']."</option>";
 									}else{
-										echo "<option value=".$data['s.id_skpd'].">".$data['nama_skpd']."</option>";
+										echo "<option value='".$data['id_skpd']."'>".$data['nama_skpd']."</option>";
 									}
 								}
 							?>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Pilih Program : </td>
+					<td>
+						<select id="program">
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Pilih Kegiatan : </td>
+					<td>
+						<select id="kegiatan">
 						</select>
 					</td>
 				</tr>
@@ -47,7 +62,7 @@
 				<th>Aksi</th>
 			</tr>
 			</thead>
-			<tbody>
+			<tbody id="tableusulan">
 			<?php
 				$tampil = mysqli_query($koneksi,"SELECT u.kode_usulan,j.nama_jabatan,r.nama_ruangan,nip,b.nama_barang,jumlah,satuan,jumlah_disetujui FROM
 					skpd s,program_skpd p,kegiatan_program k,usulan_barang u, jabatan j, ruangan r, barang b
