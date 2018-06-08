@@ -139,7 +139,7 @@
 				<ul class="menu-sidebar">
 					<li class="header">MENU</li>
 					<li><a href="?data=beranda"><img src="../assets/img/home.svg" class="menu-icon">Beranda</a></li>
-					<li><a href="?data=optimasi"><img src="../assets/img/upload.svg" class="menu-icon">Optimasi Barang</a></li>
+					<li><a href="?data=optimasi"><img src="../assets/img/gear.svg" class="menu-icon">Optimasi Barang</a></li>
 					<li><a href="?data=program"><img src="../assets/img/upload.svg" class="menu-icon">Usulan Rencana Kebutuhan</a></li>
 					<!--<li><a href="?data=rencana">Perencanaan</a></li>-->
 				</ul>
@@ -170,7 +170,7 @@
 					}
 				?>
 			<footer class="foot_dash">
-			<p>Copyright &copy; Crafted by <b>Farhan and Gibran.</b></p>
+				<p>Copyright &copy; 2018 Nuronia Zulva </p>
 			</footer>
 			<div class="clear"></div>
 		</div>

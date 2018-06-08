@@ -38,9 +38,10 @@
 			<td>'.$data['jumlah'].'</td>
 			<td>'.$data['satuan'].'</td>
 			<td>
-				<form method="post" action="usulan/editsetuju.php?kode_usulan='.$data['kode_usulan'].'&&id_skpd=$idskpd">
-					<input type="number" max="'.$data['jumlah'].'" value="'.$data['jumlah_disetujui'].'" name="jumlah_disetujui">
-					<input type="submit" value="Edit">
+				
+				<form method="post" action="usulan/editsetuju.php?kode_usulan='.$data['kode_usulan'].'&&id_skpd=<?php echo $idskpd;">
+						<input type="number" max="'.$data['jumlah'].'" value="'.$data['jumlah_disetujui'].'" name="jumlah_disetujui" class="form-control" style="width:70%;">
+						<input type="submit" value="Edit" class="btn btn-info">
 				</form>
 			</td>
 		</tr>';

@@ -41,8 +41,8 @@
 				<td><?php echo $data['jumlah']; ?></td>
 				<td><?php echo $data['satuan']; ?></td>
 				<td>
-				<?php echo"<a href=?data=program/edit&&kode=$data[kode_usulan]>Edit</a>"; ?> | 
-				<?php echo"<a href=\"?data=program/hapus&&kode=$data[kode_usulan]\" onClick=\"return confirm('Apakah Anda benar-benar akan menghapus data?')\">Hapus</a>"; ?>
+				<?php echo"<a href=?data=program/edit&&kode=$data[kode_usulan]><button class='btn btn-warning' title='Edit usulan'><i class='glyphicon glyphicon-edit'></i></button></a>"; ?>
+				<?php echo"<a href=\"?data=program/hapus&&kode=$data[kode_usulan]\" onClick=\"return confirm('Apakah Anda benar-benar akan menghapus data?')\"><button class='btn btn-danger' title='Hapus usulan'><i class='glyphicon glyphicon-remove'></i></button></a>"; ?>
 				</td>
 			</tr>
 			<?php

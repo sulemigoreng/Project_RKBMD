@@ -22,7 +22,6 @@
 				<div class="menu-bar">
 					<ul class="nav-bar">
 						<a href="home.php"><li>Beranda</li></a>
-						<a href="aturan"><li>Aturan</li></a>
 						<a href="login.php"><li>Login</li></a>
 						<a href="#" class="active"><li>About</li></a>
 					</ul>
@@ -40,8 +39,7 @@
 					<p>Aplikasi RKBMD Kendaraan Dinas dan Peralatan Kantor ini dibuat untuk memenuhi salah satu syarat menyelesaikan mata kuliah tugas akhir di prodi D4 Manajemen Aset Politeknik Negeri Bandung  </p>
 					<div style="width:100%;height:112px;">
 						<div class="about-contact-2">
-							<div style="width:100%;"><div class="foto"></div> Farhan Rahmat A <br/><small>( farhan.rahmat.tif417@polban.ac.id )</small></div>
-							<div style="width:100%;margin-top:20px;"><div class="foto"></div> Ilham Gibran A M <br/><small>( ilham.gibran.tif417@polban.ac.id )</small></div>
+							<div style="width:100%;margin-top:20px;"><div class="foto"><img src="assets/img/girl.png" style="width:100%;"></div>Nuronia Zulva<br/><small>( nuroniaz@gmail.com )</small></div>
 						</div>
 						<div class="about-contact">
 							<img src="assets/img/Cimahi.gif" style="height:112px;float:left;margin-right:10px;"><b>Pemkot Cimahi</b><br/>
@@ -57,7 +55,7 @@
 			</div>
 		</div>
 		<footer class="foot_login">
-			<p>Copyright &copy; Crafted by <b>Farhan and Gibran.</b></p>
+			<p>Copyright &copy; 2018 Nuronia Zulva </p>
 		</footer>
 	</div>
   </body>

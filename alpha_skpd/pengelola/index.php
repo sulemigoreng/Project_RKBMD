@@ -44,7 +44,6 @@
     	$(document).ready(function(){
     		$('#skpd').change(function(){
     			var idskpd=$(this).val();
-    			alert(idskpd);
     			$.ajax({
     				url:'usulan/getprogram.php',
     				method:'POST',
@@ -64,7 +63,6 @@
     		});
     		$('#program').change(function(){
     			var idprogram=$(this).val();
-    			alert(idprogram);
     			$.ajax({
     				url:'usulan/getkegiatan.php',
     				method:'POST',
@@ -84,7 +82,6 @@
     		});
     		$('#kegiatan').change(function(){
     			var idkegiatan=$(this).val();
-    			alert(idkegiatan);
     			$.ajax({
     				url:'usulan/getusulan.php',
     				method:'POST',
@@ -134,9 +131,9 @@
 					<li class="header">MENU</li>
 					<li><a href='?data=beranda'><img src="../assets/img/home.svg" class="menu-icon">Beranda</a></li>
 					<li><a href="?data=karyawan"><img src="../assets/img/users.svg" class="menu-icon">Karyawan</a></li>
-					<li><a href="?data=aturan"><img src="../assets/img/upload.svg" class="menu-icon">Kelola Aturan</a></li>
+					<li><a href="?data=aturan"><img src="../assets/img/gear.svg" class="menu-icon">Kelola Aturan</a></li>
 					<li><a href="?data=barang"><img src="../assets/img/clipboard.svg" class="menu-icon">Barang</a></li>
-					<li><a href="?data=usulan"><img src="../assets/img/clipboard.svg" class="menu-icon">Usulan</a></li>
+					<li><a href="?data=usulan"><img src="../assets/img/upload.svg" class="menu-icon">Usulan</a></li>
 				</ul>
 				</div>
 
@@ -160,7 +157,7 @@
 					}
 				?>
 			<footer class="foot_dash">
-			<p>Copyright &copy; Crafted by <b>Farhan and Gibran.</b></p>
+			 <p>Copyright &copy; 2018 Nuronia Zulva </p>
 			</footer>
 			<div class="clear"></div>
 		</div>

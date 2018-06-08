@@ -25,9 +25,8 @@
 				<div class="menu-bar">
 					<ul class="nav-bar">
 						<a href="home.php"><li>Beranda</li></a>
-						<a href="#"><li>Aturan</li></a>
 						<a href="#" class="active"><li>Login</li></a>
-						<a href="#"><li>About</li></a>
+						<a href="about.php"><li>About</li></a>
 					</ul>
 				</div>
 			</div>
@@ -57,7 +56,7 @@
 			</div>
 		</div>
 		<footer class="foot_login">
-			<p>Copyright &copy; Crafted by <b>Farhan and Gibran.</b></p>
+			<p>Copyright &copy; 2018 Nuronia Zulva </p>
 		</footer>
 	</div>
   </body>

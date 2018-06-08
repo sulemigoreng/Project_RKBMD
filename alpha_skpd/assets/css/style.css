@@ -239,6 +239,13 @@ footer .nav-bar li:hover{
 	padding:20px;
 	color:#FFF;
 	cursor:pointer;
+	float:left;	
+	text-align:left;
+}
+.fitur_text button img{
+	width:35px;
+	margin-right:10px;
+	float:left;
 }
 .clear{
 	clear:both;
@@ -399,7 +406,7 @@ footer .nav-bar li:hover{
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
-	height:320px;
+	height:310px;
 }
 .about:before{
 	content: "";
@@ -603,7 +610,7 @@ footer .nav-bar li:hover{
 .main-dash{
 	padding-left:260px;
 	background-color:#ECF0F5;
-	min-height:500px;
+	min-height:527px;
 	padding-top:10px;
 	padding-right:30px;
 	padding-bottom:20px;

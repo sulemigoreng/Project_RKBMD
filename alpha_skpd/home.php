@@ -22,7 +22,6 @@
 				<div class="menu-bar">
 					<ul class="nav-bar">
 						<a href="#" class="active"><li>Beranda</li></a>
-						<a href="#"><li>Aturan</li></a>
 						<a href="login.php"><li>Login</li></a>
 						<a href="about.php"><li>About</li></a>
 					</ul>
@@ -51,9 +50,12 @@
 			<div class="fitur_container">
 				<div class="fitur_text">
 					<h2>LANDASAN NORMATIF</h2>
-					<p>Sebagai sebuah aplikasi yang akan berjalan di kawasan pemerintahan. Aplikasi ini tentunya memiliki landasan normatif dalam penggunaannya</p>
-					<p>Sebelum menggunakan aplikasi ini. Alangkah lebih baik jika anda mempelajari aturan-aturan terkait perencanaan kebutuhan kendaraan dinas dan peralatan kantor</p>
-					<a href="aturan"><button><b>Pelajari Selengkapnya</b></button></a>
+					<!--<p>Sebagai sebuah aplikasi yang akan berjalan di kawasan pemerintahan. Aplikasi ini tentunya memiliki landasan normatif dalam penggunaannya</p>
+					<p>Sebelum menggunakan aplikasi ini. Alangkah lebih baik jika anda mempelajari aturan-aturan terkait perencanaan kebutuhan kendaraan dinas dan peralatan kantor</p>-->
+					<a href="#" onclick="window.open('assets/pdf/aturan1-2.pdf');
+    window.open('assets/pdf/aturan1.pdf');"><button><img src="assets/img/pdf.png"></i>Peraturan Menteri Dalam Negeri Nomor 19 Tahun 2016 Tentang Pedoman Pengelolaan Barang Milik Daerah</button></a>
+					<a href="assets/pdf/aturan2.pdf" target="_blank"><button><img src="assets/img/pdf.png" style="margin-top:8px;"></i>Peraturan Menteri Dalam Negeri Nomor 11 Tahun 2007 Tentang Perubahan Atas Peraturan Menteri Dalam Negeri Nomor 7 Tahun 2006 Tentang Standarisasi Sarana dan Prasana Kerja Pemerintahan Daerah</button></button></a>
+					<a href="assets/pdf/aturan3.pdf" target="_blank"><button><img src="assets/img/pdf.png"></i>Peraturan Menteri Dalam Negeri Nomor 7 Tahun 2006 Tentang Standarisasi Sarana dan Prasana Kerja Pemerintahan Daerah</button></button></a>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -67,21 +69,21 @@
 				<div class="bungkus_det">
 					<div class="layanan_det">
 						<div class="det_pic">
-							<img src="assets/img/upload.svg" width="80%">
+							<img src="assets/img/praktis.png" width="80%">
 						</div>
 						<h4>PRAKTIS</h4>
 						<p>Pengurus barang hanya perlu memilih barang yang diperlukan terkait program dan kegiatan yang diinput.</p>
 					</div>
 					<div class="layanan_det">
 						<div class="det_pic">
-							<img src="assets/img/shield-alt.svg" width="80%">
+							<img src="assets/img/fast.png" width="80%">
 						</div>
 						<h4>CEPAT</h4>
 						<p>Sebagian proses penelaahan RKBMD Kendaraan Dinas dan Peralatan Kantor dilakukan oleh subsistem.</p>
 					</div>
 					<div class="layanan_det">
 						<div class="det_pic">
-							<img src="assets/img/chart-bar.svg" width="80%">
+							<img src="assets/img/accuracy.png" width="80%">
 						</div>
 						<h4>AKURAT</h4>
 						<p>Kebutuhan barang maksimum dan pilihan barang yang disediakan sudah sesuai dengan ketentuan yang berlaku.</p>
@@ -90,23 +92,15 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-		<div class="invite">
-			<div class="invite-text">
-				<h2>TERTARIK JADI ANGGOTA ?</h2>
-				<p>Kepada yang berminat untuk bergabung bersama Koperasi Mawaddah silahkan download formulir pendaftarannya terlebih dahulu
-				<br/>Harap membaca syarat menjadi anggota di file yang akan didownload</p>
-				<button><img src="assets/img/download.svg" class="menu-icon">Download</button>
-			</div>
-		</div>
+		
 		<footer>
 		<ul class="nav-bar">
 						<a href="#" class="active2"><li>Beranda</li></a>
-						<a href="aturan"><li>Aturan</li></a>
-						<a href="login"><li>Login</li></a>
-						<a href="about"><li>About</li></a>
+						<a href="login.php"><li>Login</li></a>
+						<a href="about.php"><li>About</li></a>
 			</ul>
 			
-			<p>Copyright &copy; Crafted by <b>Farhan and Gibran.</b></p>
+			<p>Copyright &copy; 2018 Nuronia Zulva </p>
 		</footer>
 	</div>
   </body>

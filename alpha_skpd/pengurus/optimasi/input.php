@@ -12,7 +12,7 @@
 			<div style="width:100%;">
 				<div class="form-group">
 					<label for="kodejabatan">Jabatan</label>
-					<select name="kodejabatan">
+					<select name="kodejabatan" class="form-control">
 						<?php
 							$query=mysqli_query($koneksi,'SELECT * FROM jabatan')or die(mysqli_error($koneksi));
 							while($data=mysqli_fetch_array($query)){
@@ -27,7 +27,7 @@
 				</div>
 				<div class="form-group">
 					<label for="barang">Barang</label>
-					<select name="kodebarang">
+					<select name="kodebarang" class="form-control">
 						<?php
 							$query=mysqli_query($koneksi,'SELECT * FROM barang')or die(mysqli_error($koneksi));
 							while($data=mysqli_fetch_array($query)){
@@ -42,7 +42,7 @@
 				</div>
 				<div class="form-group">
 					<label for="keterangan">Keterangan</label>
-					<textarea name="keterangan"></textarea>
+					<textarea name="keterangan" class="form-control"></textarea>
 				</div>
 			</div>
 			<h2 colspan=2 align=center><input type=Submit value=Simpan class="btn btn-primary" style="width:46%;margin-right:20px;margin-left:0px;"><input type=button value=Batal onclick=self.history.back() class="btn btn-danger" style="width:48%;"></h2>
