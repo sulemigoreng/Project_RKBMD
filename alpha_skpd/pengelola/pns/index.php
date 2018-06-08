@@ -14,28 +14,29 @@
 				<th>NIP</th>
 				<th>Nama</th>
 				<th>SKPD</th>
-				<th>Jabatan</th>
-				<th>Eselon</th>
+				<th>username</th>
+				<th>password</th>
 				<th>Aksi</th>
 			</tr>
 			</thead>
 			<tbody>
 			<?php
-				$tampil = mysqli_query($koneksi,"select * from pns order by nik");
+				$tampil = mysqli_query($koneksi,"SELECT * FROM pns p,skpd s,login l
+					WHERE(nip=username AND p.id_skpd=s.id_skpd) ORDER BY NIP")or die(mysqli_error($koneksi));
 				$no = 0;
 				while ($data = mysqli_fetch_array($tampil)){
 				$no++;
 			?>
 			<tr>
 				<td><?php echo $no; ?></td>
-				<td><?php echo $data['nik']; ?></td>
+				<td><?php echo $data['nip']; ?></td>
 				<td><?php echo $data['nama_pns']; ?></td>
-				<td><?php echo $data['skpd']; ?></td>
-				<td><?php echo $data['jabatan']; ?></td>
-				<td><?php echo $data['eselon']; ?></td>
+				<td><?php echo $data['nama_skpd']; ?></td>
+				<td><?php echo $data['username']; ?></td>
+				<td><?php echo $data['password']; ?></td>
 				<td>
-				<?php echo"<a href=?data=pns/edit&&nik=$data[nik]>Edit</a>"; ?> | 
-				<?php echo"<a href=\"?data=pns/hapus&&nik=$data[nik]\" onClick=\"return confirm('Apakah Anda benar-benar akan menghapus $data[nama_pns]?')\">Hapus</a>"; ?>
+				<?php echo"<a href=?data=pns/edit&&nip=$data[nip]>Edit</a>"; ?> | 
+				<?php echo"<a href=\"?data=pns/hapus&&nip=$data[nip]\" onClick=\"return confirm('Apakah Anda benar-benar akan menghapus $data[nama_pns]?')\">Hapus</a>"; ?>
 				</td>
 			</tr>
 			<?php
