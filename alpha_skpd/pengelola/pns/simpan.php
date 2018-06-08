@@ -1,22 +1,22 @@
 <?php
-		include "../koneksi/koneksi.php";		
-		$_POST['nip'];
-		$_POST['namapns'];
-		$_POST['skpd'];
-		$_POST['jabatan'];
-		$_POST['eselon'];
+		include "../koneksi/koneksi.php";
+		$nip=$_POST['nip'];
+		$namapns=$_POST['namapns'];
+		$idskpd=$_POST['idskpd'];
+		$password=$_POST['password'];
+		$akses=$_POST['akses'];	
+		$query=mysqli_query($koneksi,"INSERT INTO pns VALUES('$nip','$namapns','$idskpd')")or die(mysqli_error($koneksi));
+		$query2=mysqli_query($koneksi,"INSERT INTO login VALUES('$nip','$password','$akses')")or die(mysqli_error($koneksi));
 
-
-		$simpan = mysqli_query($koneksi,"INSERT INTO pns (nik,nama_pns,skpd,jabatan,eselon) VALUES('$_POST[nip]','$_POST[namapns]','$_POST[skpd]','$_POST[jabatan]','$_POST[eselon]')");
-				if($simpan){
-					header ('location:../?data=pns/index');
-				}
-				else{
-					echo "
-						<script language='javascript'>
-							alert('Input Data gagal!');
-							window.location='../?data=pns/input';
-						</script>
-					";
-				}
+		if($query && $query2){
+			header ('location:../?data=karyawan');
+		}
+		else{
+			echo "
+				<script language='javascript'>
+					alert('Input Data gagal!');
+					window.location='../?data=input_pns';
+				</script>
+			";
+		}
 ?>

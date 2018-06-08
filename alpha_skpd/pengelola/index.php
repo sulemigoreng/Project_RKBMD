@@ -14,6 +14,8 @@
 	$input_aturan = 'aturan/input';
 	$karyawan = 'pns/index';
 	$usulan = 'usulan/index';
+	$input_pns = 'pns/input';
+	$hpus_pns = 'pns/hapus';
 ?>
 <!DOCTYPE html>
 <html>
@@ -153,6 +155,8 @@
 						case 'hapus_barang':	include "$hapus_barang.php";		break;
 						case 'input_barang':	include "$input_barang.php";	break;
 						case 'usulan':	include "$usulan.php";	break;
+						case 'input_pns':	include "$input_pns.php";	break;
+						case 'hapus_pns':	include "$hapus_pns.php";	break;
 						default:			include "notfound.php";		break;
 					}
 				?>

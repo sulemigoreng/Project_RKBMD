@@ -7,7 +7,7 @@
 	<div class="main-content">
 		<div class="main-title"><h2>Daftar PNS</h2></div>
 		<div class="content-big green"><h3 class="content-title">Tabel PNS</h3><br/>
-		<table align = "center" border = "1" cellpadding = "20" id="example">
+		<table align = "center" cellpadding = "20" id="example" class="table table-striped table-bordered">
 			<thead>
 			<tr>
 				<th>No</th>
@@ -16,6 +16,7 @@
 				<th>SKPD</th>
 				<th>username</th>
 				<th>password</th>
+				<th>Akses</th>
 				<th>Aksi</th>
 			</tr>
 			</thead>
@@ -34,9 +35,14 @@
 				<td><?php echo $data['nama_skpd']; ?></td>
 				<td><?php echo $data['username']; ?></td>
 				<td><?php echo $data['password']; ?></td>
+				<td><?php if($data['akses']=='0'){
+					echo 'Pengelola';
+				}else{
+					echo 'Pengurus';
+				} ?></td>
 				<td>
-				<?php echo"<a href=?data=pns/edit&&nip=$data[nip]>Edit</a>"; ?> | 
-				<?php echo"<a href=\"?data=pns/hapus&&nip=$data[nip]\" onClick=\"return confirm('Apakah Anda benar-benar akan menghapus $data[nama_pns]?')\">Hapus</a>"; ?>
+				<?php echo"<a href=?data=edit_pns&&nip=$data[nip]><button class=\"btn btn-warning\" title=\"Edit Data\"><i class=\"glyphicon glyphicon-edit\"></i></button></a>"; ?>
+				<?php echo"<a href='?data=hapus_pns&&nip=$data[nip]' onClick=\"return confirm('Apakah Anda benar-benar akan menghapus data?')\"><button class=\"btn btn-danger\" title=\"Hapus Data\"><i class=\"glyphicon glyphicon-remove\"></i></button></a>"; ?>
 				</td>
 			</tr>
 			<?php
@@ -45,7 +51,7 @@
 			</tbody>
 		</table>
 		<h2 align=center>
-			<a href="?data=pns/input"><button>Tambah</button></a> | <a href="../index.php"><button>Menu</button></a>
+			<a href="?data=input_pns"><button class="btn btn-primary" style="width:100%;"><i class="glyphicon glyphicon-plus"></i> Tambah PNS</button></a></a>
 		</h2>
 		
 		</div>
