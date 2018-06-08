@@ -139,8 +139,7 @@ while($dataProgram=mysqli_fetch_array($queryProgram)){
 						->setCellValue('Q'.$noCell , $dataUsulan['satuan'])
 						->setCellValue('S'.$noCell , $dataUsulan['satuan']);
 			$kodebarang=$dataUsulan['kode_barang'];
-			$queryOptimasi=mysqli_query($koneksi,"SELECT jumlah_barang FROM barang_optimasi 
-				WHERE(kode_barang='$kodebarang')")or die(mysqli_error($koneksi));
+			$queryOptimasi=mysqli_query($koneksi,"SELECT jumlah_barang,keterangan FROM barang_optimasi WHERE(kode_barang='$kodebarang')")or die(mysqli_error($koneksi));
 			if($dataOptimasi=mysqli_fetch_array($queryOptimasi)){
 				$objPHPExcel->getActiveSheet()
 						->setCellValue('P'.$noCell , $dataOptimasi['jumlah_barang'])
@@ -191,7 +190,7 @@ foreach(range('C','T') as $columnID) {
 
 // Redirect output to a client’s web browser (Excel2007)
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-header('Content-Disposition: attachment;filename="01simple.xlsx"');
+header('Content-Disposition: attachment;filename="a.xlsx"');
 header('Cache-Control: max-age=0');
 // If you're serving to IE 9, then the following may be needed
 header('Cache-Control: max-age=1');
