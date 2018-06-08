@@ -11,9 +11,10 @@
 	<div class="main-content">
 		<div class="main-title"><h2>Daftar Usulan</h2></div>
 		<div class="content-big green">
+			<form method="post" action="usulan/excelpengelola.php" target="_blank">
 			<div class="form-group">
 				<label for="skpd">Pilih SKPD</label>
-				<select id="skpd" class="form-control">
+				<select id="skpd" name="idskpd" class="form-control">
 							<?php
 							if($idskpd==' '){
 								echo"<option selected>- SELECT -</option>";
@@ -93,9 +94,10 @@
 			</tbody>
 		</table>
 		<h2 align=center>
-			<a href="?data=input_barang"><button class="btn btn-default" style="width:48%;margin-right:20px;border-color:#d9534f;color:#d9534f;"><img src="../assets/img/pdf.png" style="width:25px;margin-right:10px;"> Cetak Laporan ( PDF )</button></a></a>
-			<a href="?data=input_barang"><button class="btn btn-default" style="width:48%;border-color:#5cb85c;color:#5cb85c;"><img src="../assets/img/excel.png" style="width:25px;margin-right:10px;"> Cetak Laporan ( Excel )</button></a></a>
+			<a href="" target="_blank"><button type="submit" class="btn btn-default" style="width:48%;margin-right:20px;border-color:#d9534f;color:#d9534f;"><img src="../assets/img/pdf.png" style="width:25px;margin-right:10px;"> Cetak Laporan ( PDF )</button></a>
+			<a href="" target="_blank"><button class="btn btn-default" style="width:48%;border-color:#5cb85c;color:#5cb85c;"><img src="../assets/img/excel.png" style="width:25px;margin-right:10px;"> Cetak Laporan ( Excel )</button></a>
 		</h2>
+	</form>
 		</div>
 		
 		<div class="clear"></div>

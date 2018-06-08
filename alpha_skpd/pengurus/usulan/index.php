@@ -1,6 +1,7 @@
 <?php
 	include("koneksi/koneksi.php");
 	$idkegiatan=$_GET['id_kegiatan'];
+	$idskpd=$_SESSION['id_skpd'];
 ?>
 
 <div class="main-dash">
@@ -51,7 +52,8 @@
 			</tbody>
 		</table>
 		<h2 align=center>
-			<a href="?data=input_usulan&&id_kegiatan=<?php echo $idkegiatan;?>"><button class="btn btn-primary" style="width:100%;"><i class="glyphicon glyphicon-plus"></i> Tambah Usulan</button></a>
+			<a href="?data=input_usulan&&id_kegiatan=<?php echo $idkegiatan;?>"><button class="btn btn-primary" style="width:48%;margin-right:20px;"><i class="glyphicon glyphicon-plus"></i> Tambah Usulan</button></a>
+			<a href="usulan/excelpengurus.php?idskpd=<?php echo $idskpd;?>" target="_blank"><button class="btn btn-default" style="width:48%;border-color:#5cb85c;color:#5cb85c;"><img src="../assets/img/excel.png" style="width:25px;margin-right:10px;"> Cetak Laporan ( Excel )</button></a>
 		</h2>
 		
 		</div>

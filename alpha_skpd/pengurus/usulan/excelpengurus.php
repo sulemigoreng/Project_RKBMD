@@ -1,7 +1,7 @@
 <?php
-require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
-include("koneksi.php");
-
+require_once dirname(__FILE__) . '/../../Classes/PHPExcel.php';
+include("../koneksi/koneksi.php");
+$idskpd=$_GET['idskpd'];
 date_default_timezone_set('Asia/Jakarta');
 // Create new PHPExcel object
 $objPHPExcel = new PHPExcel();
@@ -97,7 +97,7 @@ $objPHPExcel->getActiveSheet()->getStyle('C10:T12')->applyFromArray($style);
 $noCell=13;
 $countProgram='A';
 $countKegiatan=1;
-$queryProgram=mysqli_query($koneksi,"SELECT * FROM program_skpd WHERE(id_skpd='1.01.01.')")or die(mysqli_error($koneksi));
+$queryProgram=mysqli_query($koneksi,"SELECT * FROM program_skpd WHERE(id_skpd='$idskpd')")or die(mysqli_error($koneksi));
 while($dataProgram=mysqli_fetch_array($queryProgram)){
 	$objPHPExcel->getActiveSheet()
 				->setCellValue('D'.$noCell , $countProgram)
