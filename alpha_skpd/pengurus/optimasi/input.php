@@ -26,7 +26,7 @@
 					<input type="text" name="nip" class="form-control">
 				</div>
 				<div class="form-group">
-					<label for="barang">Barang</label>
+					<label for="barang">Kendaraan / Peralatan</label>
 					<select name="kodebarang" class="form-control">
 						<?php
 							$query=mysqli_query($koneksi,'SELECT * FROM barang')or die(mysqli_error($koneksi));

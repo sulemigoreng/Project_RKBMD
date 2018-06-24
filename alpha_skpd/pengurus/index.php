@@ -1,4 +1,5 @@
 <?php
+	ob_start(); //FIX Cannot modify header
 	session_start();
 	if($_SESSION['level']==1 and $_SESSION['login']=='aktif'){
 	$rencana = 'perencanaan/index';
@@ -148,7 +149,7 @@
 				<?php
 					if(empty($_GET['data'])){
 						$_GET['data'] = "beranda";
-					}
+					}else{
 					switch ($_GET['data']) {
 						case 'beranda':		include "beranda.php";		break;
 						case 'rencana':		include "$rencana.php";		break;
@@ -163,10 +164,16 @@
 						case 'input_kegiatan':     include "$input_kegiatan.php"; break;
 						
 						case 'usulan':     include "$usulan.php"; break;
+						case 'hapus_usulan': include "usulan/hapus.php"; break;
 						case 'input_usulan':     include "$input_usulan.php"; break;
+
 						case 'optimasi': include "$optimasi.php"; break;
 						case 'input_optimasi': include "$input_optimasi.php"; break;
+						case 'optimasi_edit': include "optimasi/edit.php"; break;
+						case 'optimasi_hapus': include "optimasi/hapus.php"; break;
+						
 						default:			include "notfound.php";		break;
+					}
 					}
 				?>
 			<footer class="foot_dash">

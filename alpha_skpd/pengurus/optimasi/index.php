@@ -37,8 +37,8 @@
 				<td><?php echo $data['jumlah_barang']; ?></td>
 				<td><?php echo $data['keterangan']; ?></td>
 				<td>
-				<?php echo"<a href=?data=optimasi/edit&&kode=$data[id_barang_optimasi]><button class='btn btn-warning' title='Edit kegiatan'><i class='glyphicon glyphicon-edit'></i></button></a>"; ?>
-				<?php echo"<a href=\"?data=oprimasi/hapus&&kode=$data[id_barang_optimasi]\" onClick=\"return confirm('Apakah Anda benar-benar akan menghapus data?')\"><button class='btn btn-danger' title='Hapus kegiatan'><i class='glyphicon glyphicon-remove'></i></button></a>"; ?>
+				<?php echo"<a href=?data=optimasi_edit&&kode=$data[id_barang_optimasi]><button class='btn btn-warning' title='Edit optimasi'><i class='glyphicon glyphicon-edit'></i></button></a>"; ?>
+				<?php echo"<a href=\"?data=optimasi_hapus&&kode=$data[id_barang_optimasi]\" onClick=\"return confirm('Apakah Anda benar-benar akan menghapus data?')\"><button class='btn btn-danger' title='Hapus kegiatan'><i class='glyphicon glyphicon-remove'></i></button></a>"; ?>
 				</td>
 			</tr>
 			<?php
