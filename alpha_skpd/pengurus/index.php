@@ -165,6 +165,7 @@
 						
 						case 'usulan':     include "$usulan.php"; break;
 						case 'hapus_usulan': include "usulan/hapus.php"; break;
+						case 'edit_usulan': include "usulan/edit.php"; break;
 						case 'input_usulan':     include "$input_usulan.php"; break;
 
 						case 'optimasi': include "$optimasi.php"; break;
