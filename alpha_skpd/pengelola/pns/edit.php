@@ -41,7 +41,7 @@
 				</div>
 				<div class="form-group">
 					<label for="akses">Pilih Akses</label>
-					<select name="asess" class="form-control">
+					<select name="akses" class="form-control">
 						<option <?php if($dataEdit['akses']=='0'){echo 'selected';} ?> value='0'>Pengelola</option>
 						<option <?php if($dataEdit['akses']=='1'){echo 'selected';} ?> value='1'>Pengurus</option>
 					</select>
