@@ -1,4 +1,5 @@
 <?php
+	ob_start(); //FIX Cannot modify header
 	session_start();
 	if($_SESSION['level']==0 and $_SESSION['login']=='aktif'){
 	
@@ -15,7 +16,8 @@
 	$karyawan = 'pns/index';
 	$usulan = 'usulan/index';
 	$input_pns = 'pns/input';
-	$hpus_pns = 'pns/hapus';
+	$hapus_pns = 'pns/hapus';
+	$edit_pns = 'pns/edit';
 ?>
 <!DOCTYPE html>
 <html>
@@ -157,6 +159,7 @@
 						case 'usulan':	include "$usulan.php";	break;
 						case 'input_pns':	include "$input_pns.php";	break;
 						case 'hapus_pns':	include "$hapus_pns.php";	break;
+						case 'edit_pns':	include "$edit_pns.php";	break;
 						default:			include "notfound.php";		break;
 					}
 				?>

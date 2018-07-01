@@ -1,54 +1,57 @@
 <?php
 	include "koneksi/koneksi.php";
-	$edit = mysqli_query($koneksi,"select * from pns where nik='$_GET[nik]'");
-	$data = mysqli_fetch_array($edit);
-	$eselon = $data['eselon'];
+	$edit = mysqli_query($koneksi,"SELECT * FROM pns p,skpd s,login l
+					WHERE(nip='$_GET[nip]' AND p.id_skpd=s.id_skpd AND nip=username) ORDER BY NIP")or die(mysqli_error($koneksi));
+	$dataEdit = mysqli_fetch_array($edit);
 ?>
-<html>
-	<head>
-    	<title>Edit Data Karyawan</title>
-    </head>
-    <body>
-    	<h2 align=center>Edit Data Karyawan </h2>
-        <form method='POST' action='pns/update.php'>
-            <table align=center border=0 cellpadding=20>
-				<tr>
-					<td>NIK</td>
-					<td>:</td>
-					<td><input type='text' name='nik' readonly value='<?php echo "$data[nik]"; ?>' class="form-dash"></td>
-				</tr>
-				<tr>
-					<td>Nama</td>
-					<td>:</td>
-					<td><input type='text' name='nama' value='<?php echo "$data[nama_pns]"; ?>'></td>
-				</tr>
-				<tr>
-					<td>SKPD</td>
-					<td>:</td>
-					<td><textarea rows=4 cols=50 name='skpd'><?php echo "$data[skpd]"; ?></textarea></td>
-				</tr>
-				<tr>
-					<td>Jabatan</td>
-					<td>:</td>
-					<td><input type='text' name='jabatan' value='<?php echo "$data[jabatan]"; ?>'></td>
-				</tr>
-				<tr>
-					<td>Jenis Kelamin</td>
-					<td>:</td>
-					<td>
-						<input type='radio' name='eselon' value='1' <?php if ($eselon == '1') echo 'checked="checked"'; ?>>1
-						<input type='radio' name='eselon' value='2' <?php if ($eselon == '2') echo 'checked="checked"'; ?>>2
-						<input type='radio' name='eselon' value='3' <?php if ($eselon == '3') echo 'checked="checked"'; ?>>3
-						<input type='radio' name='eselon' value='4' <?php if ($eselon == '4') echo 'checked="checked"'; ?>>4
-						<input type='radio' name='eselon' value='5' <?php if ($eselon == '5') echo 'checked="checked"'; ?>>5
-						
-					</td>
-				</tr>
-            </table>
-            <h2 align=center>
-                <input type=submit value='Update'>
-                <input type=button value='Batal' onclick='self.history.back()'>
-            </h2>
-        </form>
-    </body>
-</html>
+<div class="main-dash">
+	
+	<!--- MAIN CONTENT HERE -->
+	<div class="main-content">
+		<div class="main-title"><h2>Input PNS</h2></div>
+		<div class="content-medium green"><h3 class="content-title">Form Input PNS</h3><br/>
+		<form method="POST" action="pns/update.php" style="padding:0px 10px 10px 10px;">
+			<div style="width:100%;">
+				<div class="form-group">
+					<label for="nip">NIP</label>
+					<input type="text" name="nip" class="form-control" value="<?php echo $dataEdit['nip']; ?>">
+				</div>
+				<div class="form-group">
+					<label for="namapns">Nama</label>
+					<input type="text" name="namapns" class="form-control" value="<?php echo $dataEdit['nama_pns']; ?>">
+				</div>
+				<div class="form-group">
+					<label for="skpd">Pilih SKPD</label>
+					<select name="idskpd" class="form-control">
+						<?php
+							$query=mysqli_query($koneksi,"SELECT * FROM skpd")or die(mysqli_error($koneksi));
+							while ($data=mysqli_fetch_array($query)) {
+								if($dataEdit['id_skpd']==$data['id_skpd']){
+									echo "<option selected value='".$data['id_skpd']."'>".$data['nama_skpd']."</option>";
+								}else{
+									echo "<option value='".$data['id_skpd']."'>".$data['nama_skpd']."</option>";
+								}
+							}
+						?>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="text" name="password" class="form-control" value="<?php echo $dataEdit['password']; ?>">
+				</div>
+				<div class="form-group">
+					<label for="akses">Pilih Akses</label>
+					<select name="asess" class="form-control">
+						<option <?php if($dataEdit['akses']=='0'){echo 'selected';} ?> value='0'>Pengelola</option>
+						<option <?php if($dataEdit['akses']=='1'){echo 'selected';} ?> value='1'>Pengurus</option>
+					</select>
+				</div>
+			</div>
+			<h2 colspan=2 align=center><input type=Submit value=Simpan class="btn btn-primary" style="width:46%;margin-right:20px;margin-left:0px;"><input type=button value=Batal onclick=self.history.back() class="btn btn-danger" style="width:48%;"></h2>
+			
+		</form>
+		<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>

@@ -5,8 +5,8 @@
 	
 	<!--- MAIN CONTENT HERE -->
 	<div class="main-content">
-		<div class="main-title"><h2>Input PNS</h2></div>
-		<div class="content-medium green"><h3 class="content-title">Form Input PNS</h3><br/>
+		<div class="main-title"><h2>Edit Karyawan</h2></div>
+		<div class="content-medium green"><h3 class="content-title">Form Edit Karyawan</h3><br/>
 		<form method="POST" action="pns/simpan.php" style="padding:0px 10px 10px 10px;">
 			<div style="width:100%;">
 				<div class="form-group">
