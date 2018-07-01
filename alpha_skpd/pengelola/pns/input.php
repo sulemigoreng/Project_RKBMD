@@ -34,7 +34,7 @@
 				</div>
 				<div class="form-group">
 					<label for="akses">Pilih Akses</label>
-					<select name="asess" class="form-control">
+					<select name="akses" class="form-control">
 						<option value='0'>Pengelola</option>
 						<option value='1'>Pengurus</option>
 					</select>
